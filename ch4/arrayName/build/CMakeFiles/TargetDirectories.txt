@@ -1,0 +1,3 @@
+/home/cwj/CPlusPlus_ws/ch4/arrayName/build/CMakeFiles/edit_cache.dir
+/home/cwj/CPlusPlus_ws/ch4/arrayName/build/CMakeFiles/rebuild_cache.dir
+/home/cwj/CPlusPlus_ws/ch4/arrayName/build/CMakeFiles/arrayname.dir

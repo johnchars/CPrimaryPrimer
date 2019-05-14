@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstring>
+#include "plorg.h"
+
+plorg::plorg(char* name, int num){
+	std::cout <<"Creating a plorg object...\n";
+	strncpy(m_name,name,M);
+	m_name[M] = '\0';
+	m_CI = num;
+}
+
+void plorg::modify(int num){
+	std::cout << "Modify " << m_name << "'s CI=" << m_CI << " to "
+		<< num << std::endl;
+	m_CI = num;
+}
+
+void show() const {
+	using std::cout;
+	using std::endl;
+	cout << "plorg info :\n";
+	cout << m_name << "'s CI=" << m_CI << endl;
+}
+

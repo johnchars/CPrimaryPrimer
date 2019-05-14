@@ -1,0 +1,20 @@
+#include <iostream>
+int main(){
+	using namespace std;
+	const int M=12;
+	char mouth[M];
+	int quantities[M], sum=0;
+	for ( int i=0; i<M; i++){
+		cout <<"Enter " <<i+1<<" mouth quantities\n";
+		cin >> quantities[i];
+		sum += quantities[i];
+		mouth[i] = i+1;
+	}	
+	for ( int j=0; j<M;j++){
+		cout << mouth[j] << "mouth sell "
+			<< quantities[j]<< endl;
+		//cout << "All mouth sum is" << sum << endl;
+	}
+	cout << " the year sum is" << sum << endl;
+	return 0;
+}

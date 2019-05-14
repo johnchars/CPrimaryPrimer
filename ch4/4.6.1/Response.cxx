@@ -1,0 +1,14 @@
+#include <iostream>
+int main(){
+	using namespace std;
+
+	enum Response{
+	No, Yes, Maybe
+	};
+	Response a;
+	a=Yes;
+	if (a == 1)
+		cout << "right\n" ;
+	else cout << "false\n";
+	return 0;
+}

@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+#include <cstring>
+
+struct stringy {
+	char * str;
+	int ct;
+};
+
+void set(stringy & rst, char arr[]);
+void show(const char* pst, int n=1);
+void show(const stringy & rst, int n=1);
+
+int main(){
+	stringy beany;
+	char testing[] = "Reality isn't what it used to be.";
+
+	set(beany, testing);
+	show(beany);
+	show(beany,2);
+	testing[0]= 'D';
+	testing[1] = 'u';
+	show(testing);
+	show(testing, 3);
+	show("Done!");
+	delete beany.str;
+	return 0;
+}
+
+void set(stringy & rst, char arr[]){
+	rst.ct = strlen(arr);
+	rst.str = new char[rst.ct];
+	strcpy(rst.str,arr);
+}
+
+void show(const char* pst, int n){
+	for (int i=0; i<n; i++)
+		cout << pst << endl;
+}
+
+void show(const stringy & rst, int n){
+	for (int i=0; i<n; i++){
+		/*
+		for ( int j=0; j<rst.ct; j++){
+			cout << *(rst.str+j);
+		}*/
+		cout << rst.str;
+		cout << endl;
+	}
+}
+

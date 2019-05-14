@@ -1,0 +1,34 @@
+#include <iostream>
+
+const int Size = 5;
+
+template <typename T>
+T max( T arr[]);
+int main(){
+	using namespace std;
+	int arr1[Size];
+	double arr2[Size];
+	cout << "Enter int array[5] & double array[5].\n";
+	//cin >> arr1 >> arr2;
+	for (int i=0; i<Size; i++){
+		cin >> arr1[i];
+	}
+	cin.get();
+	cout << "now is double array.\n";
+	for (int i=0; i<Size; i++){
+		cin >>arr2[i];
+	}
+	cout << "Type int array max is: " << max(arr1) << endl;
+	cout << "Type double array max is: " << max(arr2) << endl;
+	return 0;
+
+}
+
+template <typename T>
+T max( T arr[]){
+	T temp=arr[0];
+	for (int i=1; i<Size;i++)
+		if (temp < arr[i])
+			temp = arr[i];
+	return temp;	
+}

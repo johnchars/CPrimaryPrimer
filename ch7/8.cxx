@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+const int Seasons=4;
+const char* sname[Seasons] = {"Spring", "Summer", "Fall", "Wintter"};
+
+void fill( double object[]);
+void show( double object[]);
+int main(){
+	using namespace std;
+	double expense[Seasons];
+	fill(expense);
+	show(expense);
+	return 0;
+}
+
+void fill( double object[]){
+	using namespace std;
+	for (int i=0; i<Seasons; i++){
+		cout << "Enter " << sname[i] << " expenses: ";
+	        cin >> object[i];
+	}
+
+}
+
+void show( double object[]){
+	using namespace std;
+	double total = 0.0;
+	cout << "\nEXPENSES\n";
+	for (int i=0; i<Seasons; i++){
+		cout << sname[i] << ": $" << object[i] << endl;
+		total += object[i];
+	}
+	cout << "Total Expenses: $" << total << endl;
+}
