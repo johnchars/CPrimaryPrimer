@@ -24,7 +24,15 @@ namespace VECTOR {
 		double xval() const {return x;}
 		double yval() const {return y;}
 		double magval() const {return mag;}
-		double ang() const {return ang;}
+		double angval() const {return ang;}
+		void polar_mode();
+		void rect_mode();
 		
+		Vector operator+(const Vector & b) const;
+		Vector operator-(const Vector & b) const;
+		Vector operator-() const;
+		Vector operator*(double n) const;
+		friend Vector operator*(double n, Vector & a);
+		friend std::ostream & operator<<(std::ostream & os, const Vector & v);
 	}
 }
